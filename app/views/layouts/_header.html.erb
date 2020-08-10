@@ -2,11 +2,12 @@
   <div class="container">
     <%= link_to "テラフォーミングマーズ", root_path, id: "logo" %>
     <nav>
+      <% if user_signed_in? %>
+        <p class="navbar-text"><%= gravatar_for current_user %><%= current_user.name %>さん</p>
+      <% end %>
       <ul class="nav navbar-nav navbar-right">
         <li class="navbar-item"><%= link_to "Home", root_path %></li>
         <% if user_signed_in? %>
-        <li class="navbar-item"><%= gravatar_for current_user %></li>
-        <li class="navbar-item"><%= current_user.name %>さん</li>
         <li class="navbar-item"><%= link_to 'Log out', log_out_path, method: :delete %></li>
         <% else %>
         <li class="navbar-item"><%= link_to "Log in", user_google_omniauth_authorize_path %></li>

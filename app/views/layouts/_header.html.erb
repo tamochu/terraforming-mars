@@ -5,7 +5,8 @@
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "Home", root_path %></li>
         <% if user_signed_in? %>
-        <li><%= gravatar_for current_user %><%= current_user.name %>さん</li>
+        <li><%= gravatar_for current_user %></li>
+        <li><%= current_user.name %>さん</li>
         <li><%= link_to 'Log out', log_out_path, method: :delete %></li>
         <% else %>
         <li><%= link_to "Log in", user_google_omniauth_authorize_path %></li>

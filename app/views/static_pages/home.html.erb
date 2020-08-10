@@ -2,7 +2,10 @@
 <div class="center jumbotron">
   <h1>テラフォーミングマーズ</h1>
   <p>
-    ゲームの卓へのリンクをここに
-    <a href="https://google.com">google</a>
+    <% if user_signed_in? %>
+      <%= link_to 'ゲームルーム', games_path %>
+    <% else %>
+      ログインしてください。
+    <% end %>
   </p>
 </div>

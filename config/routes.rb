@@ -8,6 +8,6 @@ Rails.application.routes.draw do
   
   root 'static_pages#home'
   get '/about', to: 'static_pages#about'
-  
-  get '/hoge', to: 'games#hoge'
+
+  resources :games, only: [ :index, :new, :create, :show, :destroy ]
 end

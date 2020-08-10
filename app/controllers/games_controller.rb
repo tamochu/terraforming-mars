@@ -1,7 +1,19 @@
 class GamesController < ApplicationController
   before_action :logged_in_user
   
-  def hoge
+  def index
+  end
+  
+  def new
+  end
+
+  def create
+  end
+
+  def show
+  end
+
+  def destroy
   end
   
   private

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sort_index: 1
+  card: one
+  game: one
+
+two:
+  sort_index: 1
+  card: two
+  game: two

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  detail: MyText
+  cost: 1
+  cond_kind: 1
+  cond_value: 1
+
+two:
+  name: MyString
+  detail: MyText
+  cost: 1
+  cond_kind: 1
+  cond_value: 1

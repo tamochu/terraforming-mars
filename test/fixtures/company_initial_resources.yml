@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  yield: 1
+  property: 1
+  resource: one
+  company: one
+
+two:
+  yield: 1
+  property: 1
+  resource: two
+  company: two

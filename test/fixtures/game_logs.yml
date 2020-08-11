@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  log: MyText
+  show_on_playing: false
+  game: one
+
+two:
+  log: MyText
+  show_on_playing: false
+  game: two

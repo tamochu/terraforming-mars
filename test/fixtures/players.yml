@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tr: 1
+  marker: false
+  seat: 1
+  user: one
+  game: one
+  company: one
+
+two:
+  tr: 1
+  marker: false
+  seat: 1
+  user: two
+  game: two
+  company: two

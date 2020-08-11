@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  count: 1
+  tag: one
+  card: one
+
+two:
+  count: 1
+  tag: two
+  card: two

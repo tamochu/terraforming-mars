@@ -1,6 +1,12 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 $white: #fff;
 $light-gray: #777;
 $gray-medium-light: #eaeaea;
@@ -69,6 +75,24 @@ p {
   }
 }
 
+.gravatar-wrapper {
+    width: 50px;
+    height: 50px;
+}
+
+.gravatar {
+  position: absolute;
+}
+
+.navbar-nav li a.no-hover {
+  color: $white;
+
+  &:hover {
+    color: $white;
+    text-decoration: none;
+  }
+}
+
 /* footer */
 footer {
   margin-top: 45px;
@@ -97,4 +121,16 @@ footer {
       margin-left: 15px;
     }
   }
+}
+
+/* forms */
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+input {
+  height: auto !important;
 }

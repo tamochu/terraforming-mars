@@ -1,3 +1,18 @@
-<% provide(:title, 'Hoge') %>
-<h1>hoge</h1>
-<p>fuga</p>
+<% provide(:title, 'Games') %>
+<h1>Games</h1>
+<h2>Create new game</h2>
+<%= form_for(@game) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  
+  <%= f.submit "追加", class: "btn btn-primary" %>
+<% end %>
+<h2>game list</h2>
+<ul class="games">
+  <% @games.each do |g| %>
+    <li>
+      <%= g.id %>
+      <%= link_to g.name, g %>
+    </li>
+  <% end %>
+</ul>

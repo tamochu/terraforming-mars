@@ -366,4 +366,8 @@ class Game < ApplicationRecord
       }
     }
   end
+  
+  def disp_temperature
+    self.temperature * 2 - 30
+  end
 end

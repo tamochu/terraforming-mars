@@ -1,8 +1,8 @@
 <% provide(:title, 'Hoge') %>
 <h1>Games</h1>
 <span class="game-name">ゲーム名:<%= @game.name %></span>
-<span class="game-temperature">気温:<%= @game.temperature %></span>
-<span class="game-oxygen">酸素濃度:<%= @game.oxygen %></span>
+<span class="game-temperature">気温:<%= @game.disp_temperature %>℃</span>
+<span class="game-oxygen">酸素濃度:<%= @game.oxygen %>%</span>
 <span class="game-sea">海洋:<%= @game.sea %></span>
 <span class="game-round">ラウンド:<%= @game.round %></span>
 <span class="game-start-seat">開始位置:<%= @game.start_seat %></span>

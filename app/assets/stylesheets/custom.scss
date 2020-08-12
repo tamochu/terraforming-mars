@@ -1,5 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "./hex-style";
 
 @mixin box_sizing {
   -moz-box-sizing: border-box;

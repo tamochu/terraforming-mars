@@ -10,7 +10,6 @@ class GamesController < ApplicationController
     @game = Game.new(game_params)
     if @game.save
       @player = participate(@game)
-      logger.debug(@player.inspect)
       if @player.save
         redirect_to @game
       end
@@ -20,6 +19,7 @@ class GamesController < ApplicationController
   end
 
   def show
+    @game = Game.find(params[:id])
   end
 
   def destroy
@@ -38,8 +38,7 @@ class GamesController < ApplicationController
     end
     
     def participate(game)
-      @initialCompany = Company.initialCompany
-      logger.debug(@initialCompany.inspect)
+      @initialCompany = Company.initial_company
       current_user.player.build(
         seat: -1,
         game: game,

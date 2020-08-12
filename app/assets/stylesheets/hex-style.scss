@@ -1,0 +1,75 @@
+
+//--- IMPORT ---------------------------------//
+@import 'hexi-flexi-grid';
+
+
+//--- TEMPLATE -------------------------------//
+#boardHexGrid {
+//--- SETTINGS -------------- VALUES ---------//
+  $gridWidth:   50em;       // 'auto',(px,pt,r/em,vw/h)
+  $gridHeight:  auto;       // 'auto',(px,pt,r/em,vw/h)
+  $columnCount: 9;          // 'auto',(number)
+  $rowCount:    9;          // 'auto',(number)
+  $hexCount:    auto;       // 'auto',(number)
+  $hexLayout:   row;        // 'row','column','strict'
+  $gridOrient:  horizontal;   // 'vertical','horizontal'
+  $crop:        none;       // 'none','crop'
+  $cropFactor:  1;          // (number)
+  $hexContent:  auto;       // 'auto','center'
+  $hexSize:     auto;       // 'auto',(px,pt,r/em,vw/h)
+  $hexMargin:   0.5em;      // (px,pt,r/em,vw/h)
+  $hexShape:    hexagon;    // 'hexagon','circle'
+  $hexColor:    #ffebcd;    // hexcode,rgb/a,named
+  $images:      none;
+//--- MIXINS ---------------------------------//
+  @include hexWrapper($gridWidth,$gridHeight,
+    $gridOrient,$rowCount,$columnCount);
+  .hexCrop {
+    @include hexCrop($crop,$cropFactor);
+  }
+  .hexGrid {
+    @include hexContainer($gridWidth,$gridHeight,
+    $gridOrient,$columnCount, $images,$rowCount,
+    $hexLayout,$hexContent,$hexShape,$hexColor,
+    $hexMargin,$hexCount,$hexSize,);
+    
+    .hex {
+      &.nodisp {
+        opacity: 0.0;
+      }
+      &.sea {
+        background-color: #87ceeb;
+      }
+      &.exSea {
+        background-color: #0000ff;
+      }
+      &.forest {
+        background-color: #006400;
+      }
+      &.city {
+        background-color: #d3d3d3;
+      }
+      
+      .material, .project, .wood, .titanium {
+        height: 20px;
+        width: 10px;
+        margin: 2px 2px 30px 2px;
+      }
+      .material {
+        background-color: #a0522d;
+      }
+      .project {
+        background-color: #191970;
+      }
+      .wood {
+        background-color: #006400;
+      }
+      .titanium {
+        background-color: #ffd700;
+      }
+    }
+  }
+//--- CUSTOM STYLES --------------------------//
+
+//--------------------------------------------//
+}

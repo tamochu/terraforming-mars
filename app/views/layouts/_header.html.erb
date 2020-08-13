@@ -5,6 +5,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "Home", root_path %></li>
         <% if user_signed_in? %>
+        <li><%= link_to 'Game', games_path %></li>
         <li><div class="gravatar-wrapper"><%= gravatar_for current_user %></div></li>
         <li><a class="no-hover"><%= current_user.name %>さん</a></li>
         <li><%= link_to 'Log out', log_out_path, method: :delete %></li>

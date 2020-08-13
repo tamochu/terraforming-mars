@@ -13,6 +13,9 @@
       <li><%= p.user.name %></li>
     <% end %>
   </ul>
+  <% unless @game.player.any? { |p| p.user.id == current_user.id } %>
+    <%= link_to "参加", join_game_path(@game), class: 'btn btn-default' %>
+  <% end %>
 </div>
 <div id="boardHexGrid">
   <div class="hexCrop">

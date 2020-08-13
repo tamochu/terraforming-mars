@@ -9,5 +9,12 @@ Rails.application.routes.draw do
   root 'static_pages#home'
   get '/about', to: 'static_pages#about'
 
-  resources :games, only: [ :index, :create, :show, :destroy ]
+  resources :games, only: [ :index, :create, :show, :destroy ] do
+    collection do
+      get 'test_game'
+    end
+    member do
+      get 'join'
+    end
+  end
 end
